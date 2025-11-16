@@ -13,7 +13,7 @@ export const personalInfo = {
 export const socialLinks = {
   github: "https://github.com/lucasjotap",
   linkedin: "https://linkedin.com/in/lucasj-pereira/",
-  twitter: "https://twitter.com/yourusername", // Optional
+  twitter: "https://twitter.com/lucasjotape", // Optional
   email: "lucasjpereira@outlook.com",
 };
 

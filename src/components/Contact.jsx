@@ -15,7 +15,7 @@ const Contact = () => {
     },
     {
       name: 'GitHub',
-      value: 'github.com/yourusername',
+      value: 'github.com/lucasjotap',
       link: socialLinks.github,
       icon: (
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -25,7 +25,7 @@ const Contact = () => {
     },
     {
       name: 'LinkedIn',
-      value: 'linkedin.com/in/yourusername',
+      value: 'linkedin.com/in/lucasj-pereira/',
       link: socialLinks.linkedin,
       icon: (
         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
