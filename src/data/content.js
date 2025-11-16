@@ -7,7 +7,7 @@ export const personalInfo = {
   location: "CWB",
   email: "lucasjpereira@outlook.com",
   resume: "/resume.pdf", // Add your resume PDF to public folder
-  avatar: "https://github.com/lucasjotap/my_portfolio/blob/master/public/1200px-Lisp_logo.svg.png", // Add your avatar image to public folder
+  avatar: "/1200px-Lisp_logo.svg.png", // Add your avatar image to public folder
 };
 
 export const socialLinks = {
@@ -22,7 +22,7 @@ export const projects = [
     id: 1,
     title: "Open Lakehouse for Big Data Analytics",
     description: "Full lakehouse implementation with Apache Spark and Apache Airflow plus Delta Lake.",
-    image: "https://github.com/lucasjotap/my_portfolio/blob/master/public/Hadoop-2.jpg", // Add project images to public folder
+    image: "/Hadoop-2.jpg", // Add project images to public folder
     tags: ["Apache Spark", "Apache Airflow", "Delta Lake"],
     github: "https://github.com/lucasjotap/rocketLaunchETL",
     live: "https://github.com/lucasjotap/rocketLaunchETL", // Optional
@@ -32,7 +32,7 @@ export const projects = [
     id: 2,
     title: "React front end for voting app",
     description: "React front end for voting app built with React and Firebase. Real-time updates, drag-and-drop functionality, and team collaboration features.",
-    image: "https://github.com/lucasjotap/my_portfolio/blob/master/public/images.png",
+    image: "/images.png",
     tags: ["React", "Firebase", "TailwindCSS", "Framer Motion"],
     github: "https://github.com/lucasjotap/voting_app",
     live: "https://github.com/lucasjotap/voting_app",
@@ -42,7 +42,7 @@ export const projects = [
     id: 3,
     title: "Weather Dashboard",
     description: "A beautiful weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics. Built with React and OpenWeatherMap API.",
-    image: "https://github.com/lucasjotap/my_portfolio/blob/master/public/Untitled.jpeg",
+    image: "/Untitled.jpeg",
     tags: ["React", "API Integration", "Chart.js", "CSS3"],
     github: "https://github.com/lucasjotap/weatherForecastApp",
     live: "https://github.com/lucasjotap/weatherForecastApp",
