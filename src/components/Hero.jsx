@@ -100,7 +100,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="px-6 py-3 font-bold bg-white neocard rounded-lg"
+                className="px-3 py-1 rounded-full bg-yellow-300 text-black font-bold text-xs neocard"
               >
                 {label}
               </motion.a>

@@ -80,8 +80,8 @@ export const skills = [
   { name: "JavaScript", level: 95 },
   { name: "Node.js", level: 85 },
   { name: "TypeScript", level: 80 },
-  { name: "Python", level: 75 },
-  { name: "AWS", level: 70 },
+  { name: "Python", level: 100 },
+  { name: "AWS", level: 90 },
 ];
 
 export const navLinks = [
