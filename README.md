@@ -1,251 +1,154 @@
-# 💎 Modern Developer Portfolio
+# 🚀 Neo‑Brutalist Developer Portfolio
 
-A beautiful, modern developer portfolio website built with React, Vite, and TailwindCSS. Features a stunning glassmorphism design, smooth animations, dark mode support, and easy customization.
+A redesigned, modern developer portfolio rebuilt with a **neo‑brutalist aesthetic**, powered by React, Vite, TailwindCSS, and Framer Motion. Strong borders, bold typography, punchy colors, flat shadows, and a clean, opinionated visual identity.
 
-![Portfolio Preview](https://via.placeholder.com/800x400?text=Portfolio+Preview)
+---
 
-## ✨ Features
+## ✨ What’s New (Compared to the Glassmorphism Version)
 
-- 🎨 **Glassmorphism Design** - Modern, elegant UI with glass-like effects
-- 🌙 **Dark Mode** - Toggle between light and dark themes
-- 📱 **Fully Responsive** - Works perfectly on all devices
-- 🎭 **Smooth Animations** - Powered by Framer Motion
-- 🚀 **Fast Performance** - Built with Vite for optimal speed
-- 📝 **Easy Content Management** - All content in a single config file
-- 🎯 **SEO Friendly** - Optimized structure and meta tags
-- 🔗 **Social Links** - Easy integration with GitHub, LinkedIn, and more
+* 💥 **Neo‑Brutalist UI overhaul** — thick borders, blocky layouts, loud contrasts
+* 🟨 **Yellow/Black Theme** with support for dark mode inversion
+* 🧱 **Hard Shadows** (`shadow-[6px_6px_0px]`, `shadow-[10px_10px_0px]`)
+* 🎛️ **Simplified Components** — less blur, more structure
+* 🫀 **Framer Motion micro‑interactions**
+* 🧩 **Refactored Navbar, Contact, Buttons, and Cards**
 
-## 🛠️ Tech Stack
+---
 
-- **React 19** - UI library
-- **Vite 5** - Build tool and dev server
-- **TailwindCSS v3** - Utility-first CSS framework
-- **Framer Motion** - Animation library
-- **React Router v6** - Client-side routing
+## 🛠 Tech Stack
 
-## 📋 Requirements
+* **React 19**
+* **Vite 5**
+* **TailwindCSS 3**
+* **Framer Motion**
+* **React Router 6**
 
-- **Node.js** 18.x or higher (tested with Node 18.13.0+)
-- **npm** 8.x or higher
+---
 
 ## 📦 Installation
 
-1. **Clone or download this repository**
+```bash
+npm install
+npm run dev
+```
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+Visit: **[http://localhost:5173](http://localhost:5173)**
 
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser:**
-   Navigate to `http://localhost:5173`
+---
 
 ## 🎨 Customization
 
-All content is managed through a single configuration file: `src/data/content.js`
+### Content
 
-### Personal Information
+All personal and site data live in:
 
-Edit the `personalInfo` object to update:
-- Your name
-- Role/title
-- Bio/description
-- Location
-- Email
-- Resume link
-- Avatar image path
-
-```javascript
-export const personalInfo = {
-  name: "Your Name",
-  role: "Full Stack Developer",
-  bio: "Your bio here...",
-  // ... more fields
-};
+```
+src/data/content.js
 ```
 
-### Social Links
+You can edit:
 
-Update the `socialLinks` object with your social media profiles:
+* Personal info
+* Social links
+* Skills
+* Projects
+* Articles
 
-```javascript
-export const socialLinks = {
-  github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
-  email: "mailto:your.email@example.com",
-};
+### Styling
+
+Neo‑brutalism uses:
+
+* Thick borders → `border-2 border-black`
+* Block shadows → `shadow-[6px_6px_0px_#000]`
+* Bright colors → `bg-[#fde047]`, `bg-black`
+* Strong typography → `font-extrabold`, `font-black`
+
+You can customize global theme in:
+
+```
+src/index.css
 ```
 
-### Projects
+And Tailwind settings in:
 
-Add or modify projects in the `projects` array:
-
-```javascript
-export const projects = [
-  {
-    id: 1,
-    title: "Project Name",
-    description: "Project description...",
-    image: "/project1.jpg", // Add to public folder
-    tags: ["React", "Node.js"],
-    github: "https://github.com/...",
-    live: "https://project.com", // Optional
-    featured: true,
-  },
-  // ... more projects
-];
+```
+tailwind.config.js
 ```
 
-### Articles/Blog Posts
-
-Update the `articles` array with your blog posts:
-
-```javascript
-export const articles = [
-  {
-    id: 1,
-    title: "Article Title",
-    excerpt: "Article excerpt...",
-    date: "2024-01-15",
-    readTime: "5 min read",
-    tags: ["React", "JavaScript"],
-    slug: "article-slug",
-    content: "Markdown content here...",
-  },
-  // ... more articles
-];
-```
-
-### Skills
-
-Modify the `skills` array to showcase your expertise:
-
-```javascript
-export const skills = [
-  { name: "React", level: 90 },
-  { name: "JavaScript", level: 95 },
-  // ... more skills
-];
-```
-
-### Colors & Styling
-
-The color scheme uses a purple/pink gradient theme. To customize:
-
-1. **Primary Colors**: Edit the gradient classes in `src/index.css`
-2. **Glass Effects**: Modify the `.glass` utility class
-3. **Theme Colors**: Update Tailwind config in `tailwind.config.js`
+---
 
 ## 📁 Project Structure
 
 ```
 web_page_biz/
-├── public/              # Static assets (images, resume, etc.)
+├── public/
 ├── src/
-│   ├── components/      # React components
-│   │   ├── Navbar.jsx
-│   │   ├── Hero.jsx
-│   │   ├── About.jsx
-│   │   ├── Projects.jsx
-│   │   ├── Blog.jsx
-│   │   ├── Contact.jsx
-│   │   ├── Footer.jsx
-│   │   └── DarkModeToggle.jsx
-│   ├── contexts/        # React contexts
-│   │   └── ThemeContext.jsx
-│   ├── data/           # Content configuration
-│   │   └── content.js
-│   ├── pages/          # Page components
-│   │   └── Home.jsx
-│   ├── App.jsx         # Main app component
-│   ├── main.jsx        # Entry point
-│   └── index.css       # Global styles
-├── index.html
-├── package.json
+│   ├── components/
+│   ├── contexts/
+│   ├── data/
+│   ├── pages/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
 ├── tailwind.config.js
+├── package.json
 └── vite.config.js
 ```
 
-## 🚀 Building for Production
+---
 
-1. **Build the project:**
-   ```bash
-   npm run build
-   ```
+## 🧱 Sections
 
-2. **Preview the production build:**
-   ```bash
-   npm run preview
-   ```
+### Hero
 
-3. **Deploy:**
-   The `dist` folder contains the production-ready files. Deploy to:
-   - Vercel
-   - Netlify
-   - GitHub Pages
-   - Any static hosting service
+Bold intro with strong typography.
 
-## 📝 Adding Images
+### About
 
-1. **Avatar**: Place your avatar image in `public/` and update `personalInfo.avatar`
-2. **Project Images**: Add project screenshots to `public/` and reference in project objects
-3. **Resume**: Add your resume PDF to `public/` and update `personalInfo.resume`
+Clean layout + skill bars.
 
-## 🎯 Features Breakdown
+### Projects
 
-### Sections
+Neo‑brutalist cards with thick borders and shadows.
 
-- **Hero** - Landing section with name, role, and quick links
-- **About** - Personal information and skills showcase
-- **Projects** - Portfolio projects with tags and links
-- **Blog** - Articles and blog posts
-- **Contact** - Contact information and social links
-- **Footer** - Copyright and social icons
+### Blog
 
-### Components
+Minimalist article cards.
 
-- **Navbar** - Sticky navigation with glassmorphism effect
-- **DarkModeToggle** - Theme switcher button
-- **Hero** - Animated landing section
-- **About** - Skills and bio section
-- **Projects** - Project cards with hover effects
-- **Blog** - Article cards
-- **Contact** - Contact methods
-- **Footer** - Site footer
+### Contact
 
-## 🔧 Troubleshooting
-
-### TailwindCSS not working?
-- Ensure `tailwind.config.js` is properly configured
-- Check that `@import "tailwindcss"` is in `index.css`
-- Restart the dev server
-
-### Images not loading?
-- Ensure images are in the `public/` folder
-- Use paths starting with `/` (e.g., `/image.jpg`)
-- Check file names match exactly
-
-### Dark mode not persisting?
-- Check browser localStorage permissions
-- Ensure `ThemeContext` is properly wrapping the app
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
-## 🤝 Contributing
-
-Feel free to fork this project and customize it for your own portfolio!
-
-## 📧 Support
-
-If you have any questions or need help customizing your portfolio, feel free to open an issue or reach out!
+Yellow/black brutalist contact grid with hover motion.
 
 ---
 
-**Made with ❤️ using React, Vite, and TailwindCSS**
+## 🚀 Production Build
+
+```bash
+npm run build
+npm run preview
+```
+
+Deploy the `/dist` folder anywhere: Vercel, Netlify, GitHub Pages, etc.
+
+---
+
+## 📝 Troubleshooting
+
+### Tailwind not loading
+
+* Restart dev server
+* Confirm imports in `index.css`
+
+### Images not showing
+
+* Must be inside `/public`
+
+---
+
+## 📄 License
+
+MIT
+
+---
+
+**Built with React, TailwindCSS, and a loud neo‑brutalist vibe.**

@@ -3,7 +3,7 @@
 export const personalInfo = {
   name: "Lucas Pereira",
   role: "Software Engineer",
-  bio: "Passionate developer building modern web applications with React, Node.js, and cloud technologies. Love open-source, clean code, and solving complex problems.",
+  bio: "Software engineer specialized in big data engineering, distributed systems, and modern web architectures. Experienced with Spark, Hadoop ecosystems, Java, and large-scale backend systems — and equally comfortable building clean, efficient frontends with React.",
   location: "CWB",
   email: "lucasjpereira@outlook.com",
   resume: "/resume.pdf", // Add your resume PDF to public folder
