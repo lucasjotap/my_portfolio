@@ -17,27 +17,30 @@ const Hero = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
+      transition: { duration: 0.5 },
     },
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4 pt-20">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center px-4 pt-20 bg-white"
+    >
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
         className="max-w-4xl mx-auto text-center"
       >
-        <motion.div variants={itemVariants} className="mb-6">
+
+        {/* AVATAR */}
+        <motion.div variants={itemVariants} className="mb-10">
           <motion.div
             className="inline-block mb-4"
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 3, repeat: Infinity }}
           >
-            <div className="w-32 h-32 mx-auto rounded-full glass border-4 border-purple-400/50 overflow-hidden">
+            <div className="w-40 h-40 mx-auto rounded-xl neocard overflow-hidden bg-yellow-300">
               {personalInfo.avatar ? (
                 <img
                   src={personalInfo.avatar}
@@ -45,7 +48,7 @@ const Hero = () => {
                   className="w-full h-full object-cover"
                 />
               ) : (
-                <div className="w-full h-full flex items-center justify-center text-4xl font-bold text-gradient">
+                <div className="w-full h-full flex items-center justify-center text-5xl font-black text-black">
                   {personalInfo.name.charAt(0)}
                 </div>
               )}
@@ -53,90 +56,72 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
+        {/* NAME */}
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-7xl font-bold mb-4"
+          className="text-6xl md:text-7xl font-black mb-4 text-black"
         >
-          <span className="text-gradient">{personalInfo.name}</span>
+          {personalInfo.name}
         </motion.h1>
 
+        {/* ROLE */}
         <motion.p
           variants={itemVariants}
-          className="text-2xl md:text-3xl text-slate-300 mb-6"
+          className="text-3xl md:text-4xl font-bold text-black mb-4"
         >
           {personalInfo.role}
         </motion.p>
 
+        {/* BIO */}
         <motion.p
           variants={itemVariants}
-          className="text-lg text-slate-400 mb-8 max-w-2xl mx-auto"
+          className="text-lg text-black mb-10 max-w-2xl mx-auto"
         >
           {personalInfo.bio}
         </motion.p>
 
+        {/* BUTTONS */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-wrap justify-center gap-4 mb-8"
+          className="flex flex-wrap justify-center gap-4 mb-12"
         >
-          <motion.a
-            href={socialLinks.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="glass glass-hover px-6 py-3 rounded-lg font-semibold"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            GitHub
-          </motion.a>
-          <motion.a
-            href={socialLinks.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="glass glass-hover px-6 py-3 rounded-lg font-semibold"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            LinkedIn
-          </motion.a>
-          {personalInfo.resume && (
-            <motion.a
-              href={personalInfo.resume}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass glass-hover px-6 py-3 rounded-lg font-semibold"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Resume
-            </motion.a>
-          )}
-          <motion.a
-            href={socialLinks.email}
-            className="glass glass-hover px-6 py-3 rounded-lg font-semibold"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Contact
-          </motion.a>
+          {[
+            { label: 'GitHub', href: socialLinks.github },
+            { label: 'LinkedIn', href: socialLinks.linkedin },
+            personalInfo.resume && { label: 'Resume', href: personalInfo.resume },
+            { label: 'Contact', href: socialLinks.email },
+          ]
+            .filter(Boolean)
+            .map(({ label, href }) => (
+              <motion.a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="px-3 py-1 rounded-full bg-yellow-300 text-black font-bold text-xs neocard"
+              >
+                {label}
+              </motion.a>
+            ))}
         </motion.div>
 
-        <motion.div
-          variants={itemVariants}
-          className="flex justify-center"
-        >
+        {/* SCROLL INDICATOR */}
+        <motion.div variants={itemVariants} className="flex justify-center">
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="glass rounded-full p-2"
+            className="bg-white p-3 rounded-lg neocard"
           >
             <svg
-              className="w-6 h-6 text-slate-400"
+              className="w-6 h-6 text-black"
               fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
+              strokeWidth="3"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
@@ -148,4 +133,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
