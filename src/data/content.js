@@ -4,6 +4,7 @@ export const personalInfo = {
   name: "Lucas Pereira",
   role: "Software Engineer",
   bio: "Software engineer specialized in big data engineering, distributed systems, and modern web architectures. Experienced with Spark, Hadoop ecosystems, Java, and large-scale backend systems — and equally comfortable building clean, efficient frontends with React.",
+  bio_: "Engineer bridging cloud, big data, and system-level programming—building scalable backends, responsive frontends, and efficient software across Rust, C, Spark, and distributed architectures." ,
   location: "CWB",
   email: "lucasjpereira@outlook.com",
   resume: "/resume.pdf", // Add your resume PDF to public folder
@@ -42,7 +43,7 @@ export const projects = [
     id: 3,
     title: "Weather Dashboard",
     description: "A beautiful weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics. Built with React and OpenWeatherMap API.",
-    image: "/Untitled.jpeg",
+    image: "/dash.jpeg",
     tags: ["React", "API Integration", "Chart.js", "CSS3"],
     github: "https://github.com/lucasjotap/weatherForecastApp",
     live: "https://github.com/lucasjotap/weatherForecastApp",

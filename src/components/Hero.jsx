@@ -77,7 +77,7 @@ const Hero = () => {
           variants={itemVariants}
           className="text-lg text-black mb-10 max-w-2xl mx-auto"
         >
-          {personalInfo.bio}
+          {personalInfo.bio_}
         </motion.p>
 
         {/* BUTTONS */}
